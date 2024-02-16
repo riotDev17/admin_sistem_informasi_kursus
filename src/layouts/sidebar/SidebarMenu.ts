@@ -10,17 +10,26 @@ export const SidebarMenu = [
     link: '#',
     child: [
       {
-        childTitle: 'Master 1',
-        childLink: '/master-1',
+        childTitle: 'Agama',
+        childLink: '/agama',
       },
       {
-        childTitle: 'Master 2',
-        childLink: '/master-2',
+        childTitle: 'Pekerjaan',
+        childLink: '/pekerjaan',
       },
       {
-        childTitle: 'Master 3',
-        childLink: '/master-3',
+        childTitle: 'Pendidikan',
+        childLink: '/pendidikan',
+      },
+      {
+        childTitle: 'Penghasilan',
+        childLink: '/penghasilan',
       },
     ],
+  },
+  {
+    title: 'Sekolah',
+    icon: 'emojione-monotone:school',
+    link: '/sekolah',
   },
 ];
