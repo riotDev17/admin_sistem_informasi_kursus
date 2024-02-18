@@ -30,10 +30,25 @@ const Penghasilan = lazy(() => import('../pages/penghasilan/Index'));
 const CreatePenghasilan = lazy(() => import('../pages/penghasilan/Form/FormCreate'));
 const UpdatePenghasilan = lazy(() => import('../pages/penghasilan/Form/FormUpdate'));
 
+// USERS
+const Users = lazy(() => import('../pages/users/Index'));
+const DataUsers = lazy(() => import('../pages/users/DataUsers'));
+
 // SEKOLAH
 const Sekolah = lazy(() => import('../pages/sekolah/Index'));
 const CreateSekolah = lazy(() => import('../pages/sekolah/Form/FormCreate'));
 const UpdateSekolah = lazy(() => import('../pages/sekolah/Form/FormUpdate'));
+
+// PENGAJAR
+const Pengajar = lazy(() => import('../pages/pengajar/Index'));
+const CreatePengajar = lazy(() => import('../pages/pengajar/Form/FormCreate'));
+const UpdatePengajar = lazy(() => import('../pages/pengajar/Form/FormUpdate'));
+
+// KURSUS
+const Kursus = lazy(() => import('../pages/kursus/Index'));
+const CreateKursus = lazy(() => import('../pages/kursus/Form/FormCreate'));
+const UpdateKursus = lazy(() => import('../pages/kursus/Form/FormUpdate'));
+const DataKursus = lazy(() => import('../pages/kursus/DataKursus'));
 
 // ERROR 404
 const Error404 = lazy(() => import('../pages/Error404'));
@@ -121,6 +136,16 @@ const routes = [
   },
 
   {
+    path: '/users',
+    element: <Users />,
+  },
+
+  {
+    path: '/users/:id_users',
+    element: <DataUsers />,
+  },
+
+  {
     path: '/sekolah',
     element: <Sekolah />,
   },
@@ -133,6 +158,41 @@ const routes = [
   {
     path: '/sekolah/update-sekolah/:id_sekolah',
     element: <UpdateSekolah />,
+  },
+
+  {
+    path: '/pengajar',
+    element: <Pengajar />,
+  },
+
+  {
+    path: '/pengajar/tambah-pengajar',
+    element: <CreatePengajar />,
+  },
+
+  {
+    path: '/pengajar/update-pengajar/:id_pengajar',
+    element: <UpdatePengajar />,
+  },
+
+  {
+    path: '/kursus',
+    element: <Kursus />,
+  },
+
+  {
+    path: '/kursus/tambah-kursus',
+    element: <CreateKursus />,
+  },
+
+  {
+    path: '/kursus/update-kursus/:id_kursus',
+    element: <UpdateKursus />,
+  },
+
+  {
+    path: '/kursus/:id_kursus',
+    element: <DataKursus />,
   },
 
   // ERROR 404
