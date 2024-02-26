@@ -47,4 +47,9 @@ export const SidebarMenu = [
     icon: 'dashicons:welcome-learn-more',
     link: '/kursus',
   },
+  {
+    title: 'Pendaftar Kursus',
+    icon: 'mdi:user-add',
+    link: '/pendaftar-kursus',
+  },
 ];
