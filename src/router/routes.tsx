@@ -54,6 +54,9 @@ const DataKursus = lazy(() => import('../pages/kursus/DataKursus'));
 const PendaftarKursus = lazy(() => import('../pages/pendaftarKursus/Index'));
 const DataPendaftarKursus = lazy(() => import('../pages/pendaftarKursus/DataPendaftarKursus'));
 
+// PEMBAYARAN
+const Pembayaran = lazy(() => import('../pages/pembayaran/Index'));
+
 // ERROR 404
 const Error404 = lazy(() => import('../pages/Error404'));
 
@@ -207,6 +210,11 @@ const routes = [
   {
     path: '/pendaftar-kursus/:id_pendaftaran',
     element: <DataPendaftarKursus />,
+  },
+
+  {
+    path: '/pembayaran',
+    element: <Pembayaran />,
   },
 
   // ERROR 404
