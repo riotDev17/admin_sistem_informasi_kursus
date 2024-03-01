@@ -52,4 +52,9 @@ export const SidebarMenu = [
     icon: 'mdi:user-add',
     link: '/pendaftar-kursus',
   },
+  {
+    title: 'Pembayaran',
+    icon: 'material-symbols:money',
+    link: '/pembayaran',
+  },
 ];
