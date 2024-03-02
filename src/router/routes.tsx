@@ -57,6 +57,11 @@ const DataPendaftarKursus = lazy(() => import('../pages/pendaftarKursus/DataPend
 // PEMBAYARAN
 const Pembayaran = lazy(() => import('../pages/pembayaran/Index'));
 
+// PENGUMUMAN
+const Pengumuman = lazy(() => import('../pages/pengumuman/Index'));
+const CreatePengumuman = lazy(() => import('../pages/pengumuman/Form/FormCreate'));
+const UpdatePengumuman = lazy(() => import('../pages/pengumuman/Form/FormUpdate'));
+
 // ERROR 404
 const Error404 = lazy(() => import('../pages/Error404'));
 
@@ -215,6 +220,21 @@ const routes = [
   {
     path: '/pembayaran',
     element: <Pembayaran />,
+  },
+
+  {
+    path: '/pengumuman',
+    element: <Pengumuman />,
+  },
+
+  {
+    path: '/pengumuman/tambah-pengumuman',
+    element: <CreatePengumuman />,
+  },
+
+  {
+    path: '/pengumuman/update-pengumuman/:id_pengumuman',
+    element: <UpdatePengumuman />,
   },
 
   // ERROR 404
