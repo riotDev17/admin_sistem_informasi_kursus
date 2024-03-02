@@ -5,6 +5,8 @@ import { setPageTitle } from '../../store/themeConfigSlice';
 import { requestGetUsersByID } from '../../api/users/services/requestGetUsersByID';
 import FormatTanggal from '../../helpers/FormatTanggal';
 import BreadcrumbsDefault from '../../components/breadcrumbs/BreadcrumbsDefault';
+import BadgeBasicSuccess from '../../components/badges/basic/BadgeBasicSuccess';
+import BadgeBasicPrimary from '../../components/badges/basic/BadgesBasicPrimary';
 
 interface Users {
   nama: string;
@@ -79,7 +81,7 @@ const Profile: React.FC = () => {
                 </tr>
                 <tr className="border-none">
                   <td>Role</td>
-                  <td>: &nbsp; &nbsp; {user?.data?.role ? user?.data?.role : '-'}</td>
+                  <td>: &nbsp; &nbsp; {user?.data?.role ? user?.data?.role === 'admin' ? <BadgeBasicSuccess label={'Admin'} /> : <BadgeBasicPrimary label={'User'} /> : '-'}</td>
                 </tr>
                 <tr className="border-none">
                   <td>Tempat Lahir</td>

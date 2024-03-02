@@ -50,6 +50,18 @@ const CreateKursus = lazy(() => import('../pages/kursus/Form/FormCreate'));
 const UpdateKursus = lazy(() => import('../pages/kursus/Form/FormUpdate'));
 const DataKursus = lazy(() => import('../pages/kursus/DataKursus'));
 
+// PENDAFTAR KURSUS
+const PendaftarKursus = lazy(() => import('../pages/pendaftarKursus/Index'));
+const DataPendaftarKursus = lazy(() => import('../pages/pendaftarKursus/DataPendaftarKursus'));
+
+// PEMBAYARAN
+const Pembayaran = lazy(() => import('../pages/pembayaran/Index'));
+
+// PENGUMUMAN
+const Pengumuman = lazy(() => import('../pages/pengumuman/Index'));
+const CreatePengumuman = lazy(() => import('../pages/pengumuman/Form/FormCreate'));
+const UpdatePengumuman = lazy(() => import('../pages/pengumuman/Form/FormUpdate'));
+
 // ERROR 404
 const Error404 = lazy(() => import('../pages/Error404'));
 
@@ -193,6 +205,36 @@ const routes = [
   {
     path: '/kursus/:id_kursus',
     element: <DataKursus />,
+  },
+
+  {
+    path: '/pendaftar-kursus',
+    element: <PendaftarKursus />,
+  },
+
+  {
+    path: '/pendaftar-kursus/:id_pendaftaran',
+    element: <DataPendaftarKursus />,
+  },
+
+  {
+    path: '/pembayaran',
+    element: <Pembayaran />,
+  },
+
+  {
+    path: '/pengumuman',
+    element: <Pengumuman />,
+  },
+
+  {
+    path: '/pengumuman/tambah-pengumuman',
+    element: <CreatePengumuman />,
+  },
+
+  {
+    path: '/pengumuman/update-pengumuman/:id_pengumuman',
+    element: <UpdatePengumuman />,
   },
 
   // ERROR 404

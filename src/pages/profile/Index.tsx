@@ -6,6 +6,7 @@ import { requestGetProfilUser } from '../../api/profile/services/requestGetProfi
 import FormatTanggal from '../../helpers/FormatTanggal';
 import IconPencilPaper from '../../components/Icons/IconPencilPaper';
 import BreadcrumbsDefault from '../../components/breadcrumbs/BreadcrumbsDefault';
+import BadgeBasicSuccess from '../../components/badges/basic/BadgeBasicSuccess';
 
 interface User {
   [x: string]: any;
@@ -82,7 +83,9 @@ const Profile: React.FunctionComponent = () => {
                 </tr>
                 <tr className="border-none">
                   <td>Role</td>
-                  <td>: &nbsp; &nbsp; {user?.data?.role ? user?.data?.role : '-'}</td>
+                  <td>
+                    : &nbsp; &nbsp; <BadgeBasicSuccess label={user?.data?.role ? user?.data?.role : '-'} />{' '}
+                  </td>
                 </tr>
                 <tr className="border-none">
                   <td>Tempat Lahir</td>
