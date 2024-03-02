@@ -28,7 +28,7 @@ export const SidebarMenu = [
     ],
   },
   {
-    title: 'Users',
+    title: 'Users Management',
     icon: 'mdi:users',
     link: '/users',
   },
@@ -56,5 +56,10 @@ export const SidebarMenu = [
     title: 'Pembayaran',
     icon: 'material-symbols:money',
     link: '/pembayaran',
+  },
+  {
+    title: 'Pengumuman',
+    icon: 'mdi:announcement',
+    link: '/pengumuman',
   },
 ];
